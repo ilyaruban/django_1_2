@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Омлет</title>
+</head>
+<body>
+<h3>Для того, чтобы приготовить омлет, используйте следующие ингридиенты:</h3>
+    {% load my_tags %}
+    {% for i, amount in recipe.items %}
+        <li>{{ i }}: {% multiply amount servings %}</li>
+    {% endfor %}
+</body>
+</html>

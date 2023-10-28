@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Бутер</title>
+</head>
+<body>
+<h3>Для того, чтобы приготовить бутер, используйте следующие ингридиенты:</h3>
+    {% load my_tags %}
+    {% for i, amount in recipe.items %}
+    <li>{{ i }}: {% multiply amount servings %}</li>
+    {% endfor %}
+</body>
+</html>
